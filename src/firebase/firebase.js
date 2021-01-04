@@ -13,7 +13,7 @@ const config = {
   console.log(firebase.initializeApp(config));
   
   const database=firebase.database();
-  export{ firebase, database as default };
-  /* database.ref().set({
-      name:'Nikki Kumari'
-  }) */
+  const googleAuthProvider=new firebase.auth.GoogleAuthProvider();
+
+  export{ firebase,googleAuthProvider,database as default };
+  
